@@ -161,7 +161,7 @@
 
   .events__list {
     padding-left: 1px;
-    gap: calc(var(--gap-1024));
+    gap: var(--gap-1024);
   }
 
   .events__item {
@@ -229,6 +229,7 @@
 
   .contacts__box {
     padding-left: 1px;
+    gap: 21px;
   }
 
   .contacts__address {
@@ -237,7 +238,6 @@
   }
 
   .contacts__fieldset {
-    margin-right: 21px;
     padding-left: 1px;
     gap: 21px;
   }
@@ -288,7 +288,6 @@
   }
 
   .contacts__fieldset {
-    margin-right: 0;
     margin-bottom: 13px;
   }
 
@@ -298,10 +297,9 @@
   }
 }
 
-@media (max-width: 955px) {
-
+@media (max-width: 988px) {
   .nav__item:not(:last-child) {
-    margin-right: 44.5px;
+    margin-right: 44.4px;
   }
 
   .hero {
@@ -426,8 +424,13 @@
     margin-bottom: 11px;
   }
 
+  .contacts__box {
+    gap: 13px;
+  }
+
   .contacts__fieldset {
     padding-left: 2px;
+    margin-bottom: 0;
   }
 
   .contacts__input {
@@ -465,17 +468,8 @@
     padding-right: 18px;
   }
 
-  .nav {
-    overflow: scroll;
-  }
-
-  .nav__list {
-    flex-wrap: nowrap;
-    overflow: scroll;
-  }
-
   .nav__item:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 25px;
   }
 
   .hero__title {
@@ -522,12 +516,23 @@
   }
 
   .contacts__fieldset {
-    margin-right: 0;
     margin-bottom: 0;
   }
 
   .contacts__input {
     min-width: calc(50% - 22px);
+  }
+}
+
+@media (max-width: 620px) {
+  .nav {
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-dark-color) #000;
+  }
+
+  .nav__list {
+    flex-wrap: nowrap;
   }
 }
 
